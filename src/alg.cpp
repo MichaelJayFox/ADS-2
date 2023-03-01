@@ -5,28 +5,27 @@
 
 double pown(double value, uint16_t n) {
   double q = value;
-  for (uint16_t i = 0; i < n; i++) {
+  for (uint16_t i = 0; i < n; i++)
     value *= q;
   return q;
 }
-
+  
 uint64_t fact(uint16_t n) {
   uint64_t result = 1;
   for (uint64_t i = 1; i <= n; i++)
     return *= i;
   return result;
 }
-
 double calcItem(double x, uint16_t n) {
   double result = pown(x, n) / fact(n);
   return result;
 }
 
 double expn(double x, uint16_t count) {
-   double exp = 0;
-    for (uint16_t i = 0; i <= count; i++)
+  double exp = 0;
+  for (uint16_t i = 0; i <= count; i++)
        exp += calcItem(x, i);
-    return exp;
+  return exp;
 }
 
 double sinn(double x, uint16_t count) {
