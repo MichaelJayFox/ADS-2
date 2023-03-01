@@ -30,7 +30,7 @@ double expn(double x, uint16_t count) {
 double sinn(double x, uint16_t count) {
   double sinus = 0;
   for (uint16_t i = 1; i <= count; i++)
-      sinus += pown(-1, i - 1) * (pown(x, 2 * i - 1) / fact(2 * i - 1);
+      sinus += pown(-1, i - 1) * pown(x, 2 * i - 1) / fact(2 * i - 1);
   return sinus;
 }
 
