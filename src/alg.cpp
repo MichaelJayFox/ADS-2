@@ -5,7 +5,7 @@
 
 double pown(double value, uint16_t n) {
   double q = value;
-  for (uint16_t i = 0; i < n; i++)
+  for (uint16_t i = 1; i < n; i++)
     value *= q;
   return q;
 }
@@ -18,7 +18,7 @@ uint64_t fact(uint16_t n) {
 }
 double calcItem(double x, uint16_t n) {
   double result = pown(x, n) / fact(n);
-  return result;
+  return (pown(x,n) / fact(n));
 }
 
 double expn(double x, uint16_t count) {
@@ -30,7 +30,7 @@ double expn(double x, uint16_t count) {
 
 double sinn(double x, uint16_t count) {
   double sinus = 0;
-  for (uint16_t i = 0; i <= count; i++)
+  for (uint16_t i = 2; i <= count; i++)
       sinus += (pown(-1, i - 1) * (pown(x, 2 * i - 1) / (fact(2 * i - 1))));
   return sinus;
 }
